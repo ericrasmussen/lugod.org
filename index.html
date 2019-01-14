@@ -48,6 +48,26 @@ changefreq: weekly
 								<!-- <a href="#" class="image main"><img src="{{ "/images/computer-table.jpg" | absolute_url }}" alt="" /></a> -->
 							</article>
 
+							<article>
+								<h3> Next Meeting </h3>
+
+								{% assign mydata = site.data.events %}
+								{% assign currentTimestamp = 'now' | date: '%s' | plus: 0 %}
+								<div>
+								{% for row in mydata %}
+									{% assign eventTimestamp = row['Start']  | date: '%s' | plus: 0 %}
+									{% if eventTimestamp > currentTimestamp %}
+										{% for cell in row %}
+											<div> {{ cell[0] }} : {{ cell[1] }} </div>
+										{% endfor %}
+										{% assign breakOutOfParent = 1 %}
+									{% endif %}
+									{% if breakOutOfParent %}
+										{% break %}
+									{% endif %}
+								{% endfor %}
+							</article>
+
 						<!-- Posts -->
 							<section class="posts">
 								{% for post in site.posts limit:3 %}
