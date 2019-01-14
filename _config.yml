@@ -13,7 +13,7 @@ defaults:
   values:
     permalink: "/blog/:title/"
     layout: post
-    author:
+    author:  
 
 defaults:
 - scope:
@@ -48,6 +48,7 @@ twitter:            default
 facebook:           default
 instagram:          default
 github:             DAVISLUG
+freenode:           lugod
 
 # personal
 location:           Davis, CA
