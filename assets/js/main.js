@@ -125,9 +125,6 @@
 				);
 			});
 
-		// Scrolly.
-			$('.scrolly').scrolly();
-
 		// Background.
 			$wrapper._parallax(0.925);
 
