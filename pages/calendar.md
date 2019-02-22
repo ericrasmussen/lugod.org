@@ -6,4 +6,4 @@ calendar_timezone_offset: -0800   # required
 calendar_caption: LUGOD Events   # optional
 ---
 
-[No Javascript Calendar]({{ site.baseurl }}{% link noscript_calendar.md %})
+[No Javascript Calendar]({{ site.baseurl }}{% link pages/noscript_calendar.md %})
