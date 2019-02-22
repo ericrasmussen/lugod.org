@@ -40,16 +40,9 @@ changefreq: weekly
 
 				<!-- Main -->
 					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<p>The Linux Users' Group of Davis is a 501(c)(7) non-profit computer club serving the Sacramento region, consisting of hundreds of people who share an interested in the Linux® operating system, Free & Open Source software and other related topics — both technical and non-technical.</p>
-								</header>
-								<!-- <a href="#" class="image main"><img src="{{ "/images/computer-table.jpg" | absolute_url }}" alt="" /></a> -->
-							</article>
-
 							<article>
-								<h3> Next Meeting </h3>
+
+								<h3> Next LUGOD Meeting </h3>
 
 								{% assign mydata = site.data.events %}
 								{% assign currentTimestamp = 'now' | date: '%s' | plus: 0 %}
@@ -64,6 +57,31 @@ changefreq: weekly
 								{% endfor %}
 							</article>
 
+
+						<!-- Featured Post -->
+							<article class="post featured">
+									<p>
+										The Linux Users' Group of Davis is a 501(c)(7) non-profit computer club serving the Sacramento region, consisting of hundreds of people who share an interested in the Linux® operating system, Free & Open Source software and other related topics — both technical and non-technical.
+									</p>
+									<p>
+										Our goals are to advocate the use of Linux and Open Source, to educate the community on these software alternatives, and to support and provide a social network for local Linux users.
+									</p>
+									<p>
+										LUGOD holds regular meetings twice a month. On the first Tuesday of each month, we hold a social gathering at a local restaurant or café, and on the third Monday of each month we meet at the Davis Public Library to listen to informative presentations by guest speakers. (Day, time and location subject to change!)
+									</p>
+									<p>
+										We also hold other events and workshops and maintain a number of active mailing lists (some with over 200 subscribers), an IRC channel for live chatting, and communities on social networks (Facebook and LinkedIn).
+									</p>
+									<p>
+										Our meetings, events and membership, are free and open to the general public. Join us!
+									</p>
+								<header class="major">
+
+								</header>
+								<!-- <a href="#" class="image main"><img src="{{ "/images/computer-table.jpg" | absolute_url }}" alt="" /></a> -->
+							</article>
+
+
 						<!-- Posts -->
 							<section class="posts">
 								{% for post in site.posts limit:3 %}
@@ -73,7 +91,7 @@ changefreq: weekly
 											<span class="date">{{ post.date | date_to_string }}</span>
 											<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
 										</header>
-										<a href="{{ post.url | absolute_url }}" class="image fit"> <img src="{{ post.image | absolute_url }}" alt="" /> </a>
+										<!-- <a href="{{ post.url | absolute_url }}" class="image fit"> <img src="{{ post.image | absolute_url }}" alt="" /> </a> -->
 										<p>{{ post.excerpt }}</p>
 										<!-- <ul class="actions">
 											<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
@@ -107,7 +125,5 @@ changefreq: weekly
 
 		<!-- Scripts -->
 		{% include scripts-main.html %}
-		{% include tracking.html %}
-
 	</body>
 </html>

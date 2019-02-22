@@ -2,9 +2,55 @@
 	<li class="{% if page.url == "/" %} active {% endif %}"><a href="{{ "/" | absolute_url }}">Home</a></li>
 	<li class="{% if page.url contains '/pages/blog/' %} active {% endif %}"><a href="{{ "/pages/blog/" | absolute_url }}">Blog</a></li>
 	<li class="{% if page.url contains '/pages/calendar/' %} active {% endif %}"><a href="{{ "/pages/calendar/" | absolute_url }}">Calendar</a></li>
-	<li class="{% if page.url contains '/pages/about/' %} active {% endif %}"><a href="{{ "/pages/about/" | absolute_url }}">About</a></li>
-</ul>
 
+  <li class="dropbtn {% if page.url contains '/pages/about/' %} active {% endif %}">
+    <div class="dropdown">
+      <a>About</a>
+      <div class="dropdown-content">
+        <a href="{{ "/pages/about/philosophy/" | absolute_url }}">Philosophy</a>
+        <a href="{{ "/pages/about/objectives/" | absolute_url }}">Objectives/Bylaws</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="dropbtn {% if page.url contains '/pages/members/' %} active {% endif %}">
+    <div class="dropdown">
+      <a>Members</a>
+      <div class="dropdown-content">
+        <a href="{{ "/pages/members/join/" | absolute_url }}">Join</a>
+        <a href="{{ "/pages/members/search" | absolute_url }}">Membership Search</a>
+        <a href="{{ "/pages/members/officers" | absolute_url }}">Officers</a>
+        <a href="{{ "/pages/members/financial" | absolute_url }}">Financial</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="dropbtn {% if page.url contains '/pages/documents/' %} active {% endif %}">
+    <div class="dropdown">
+      <a>Documents</a>
+      <div class="dropdown-content">
+        <a href="{{ "/pages/documents/advocacy/" | absolute_url }}">Advocacy</a>
+        <a href="{{ "/pages/documents/club/" | absolute_url }}">Club Documents</a>
+        <a href="{{ "/pages/documents/chat/" | absolute_url }}">Chat (IRC)</a>
+        <a href="{{ "/pages/documents/mailing_lists/" | absolute_url }}">Mailing Lists</a>
+        <a href="{{ "/pages/documents/social_nets/" | absolute_url }}">Social Networks</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="dropbtn {% if page.url contains '/pages/documents/' %} active {% endif %}">
+    <div class="dropdown">
+      <a>Archive</a>
+      <div class="dropdown-content">
+        <a href="{{ "/pages/documents/old_site/" | absolute_url }}">Old Site</a>
+        <a href="{{ "/pages/documents/history/" | absolute_url }}">History</a>
+        <a href="{{ "/pages/documents/media/" | absolute_url }}">Media</a>
+        <a href="{{ "/pages/documents/letters/" | absolute_url }}">Letters</a>
+        <a href="{{ "/pages/documents/fun_stuff/" | absolute_url }}">Fun Stuff</a>
+      </div>
+    </div>
+  </li>
+</ul>
 <ul class="icons">
 <!--	 <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li> -->
 <!--	 <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li> -->
