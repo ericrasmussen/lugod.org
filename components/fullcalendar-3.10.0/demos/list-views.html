@@ -1,52 +1,12 @@
-{% assign PATH_TO_COMPONENTS =  "/components" | prepend: site.baseurl %}
-
-
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-  {% include head.html %}
-  </head>
-  <body class="is-loading">
-
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-
-      <!-- Header -->
-      <header id="header">
-        <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-      </header>
-
-      <!-- Nav -->
-      <nav id="nav"> {% include nav.html %} </nav>
-
-      <!-- Main -->
-      <div id="main">
-
-      <div>
-        <a href="{{ site.baseurl }}/{{ page.calendar_csv }}" download>Download events as a CSV</a>
-        {{ content }}
-      </div>
-
-      <div id='calendar'></div>
-
-      </div>
-
-      <!-- Footer -->
-      {% include foot.html %}
-
-    </div>
-
-
-
-
-
-
-<link href="{{PATH_TO_COMPONENTS}}/fullcalendar-3.10.0/fullcalendar.min.css" rel='stylesheet' />
-<link href="{{PATH_TO_COMPONENTS}}/fullcalendar-3.10.0/fullcalendar.print.min.css" rel='stylesheet' media='print' />
-<script src="{{PATH_TO_COMPONENTS}}/fullcalendar-3.10.0/lib/moment.min.js"></script>
-<script src="{{PATH_TO_COMPONENTS}}/fullcalendar-3.10.0/lib/jquery.min.js"></script>
-<script src="{{PATH_TO_COMPONENTS}}/fullcalendar-3.10.0/fullcalendar.min.js"></script>
-
+<head>
+<meta charset='utf-8' />
+<link href='../fullcalendar.min.css' rel='stylesheet' />
+<link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
 <script>
 
   $(document).ready(function() {
@@ -55,8 +15,17 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,basicWeek,basicDay'
+        right: 'listDay,listWeek,month'
       },
+
+      // customize the button names,
+      // otherwise they'd all just say "list"
+      views: {
+        listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' }
+      },
+
+      defaultView: 'listWeek',
       defaultDate: '2019-01-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
@@ -121,10 +90,26 @@
 
   });
 
-  </script>
+</script>
+<style>
 
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
 
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    </body>
+</style>
+</head>
+<body>
+
+  <div id='calendar'></div>
+
+</body>
 </html>
-
