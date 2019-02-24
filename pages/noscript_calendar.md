@@ -1,8 +1,8 @@
 ---
 layout: noscript_calendar
-title: LUGOD Events Calendar (Noscript)
+title: LUGOD Events List
 csv_file: /events.csv
-caption: LUGOD Events Calendar (Noscript)
+caption: LUGOD Events List
 
 ---
 
