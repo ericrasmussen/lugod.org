@@ -3,7 +3,7 @@ title:              LUGOD
 bio:                'LUGOD is the Linux Users Group of Davis'
 description:        "Website for LUGOD, the Linux Users Group Of Davis"
 locale:             en_US
-baseurl: "/lugod" # the subpath of your site, e.g. /blog
+baseurl: "/lugod.org" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 defaults:
