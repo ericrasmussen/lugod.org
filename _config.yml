@@ -15,15 +15,6 @@ defaults:
     layout: post
     author:  
 
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/blog/:title/"
-    layout: post
-    author:
-
 # Jekyll
 permalink:          /blog/:title/
 markdown:           kramdown
@@ -39,11 +30,7 @@ sass:
   sass_dir:         _sass
   style:            compressed
 
-# Comments
-disqus_shortname:   default
-
 # Social
-analytics-id:       "default"
 twitter:            default
 facebook:           default
 instagram:          default
@@ -52,8 +39,8 @@ freenode:           lugod
 
 # personal
 location:           Davis, CA
-# phone:
 email:              root@lugod.org
+# phone:
 
 # Gems
 gems:
