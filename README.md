@@ -21,7 +21,7 @@ First, download and install the nix package manager from http://nixos.org/nix/
 
 Then run the following commands:
 
-* git clone https://github.com/DAVISLUG/lugod.org.git
+* git clone https://github.com/ericrasmussen/lugod.org.git
 * cd lugod.org
 * nix-shell
 * jekyll serve --incremental
